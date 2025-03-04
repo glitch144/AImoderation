@@ -147,11 +147,10 @@ SHORTENER_DOMAINS = {
  python main.py
  ```
 ### Commands
-```markdown
- | Command       | Description                                  | Example                   |
+
+| Command       | Description                                  | Example                   |
 |---------------|----------------------------------------------|---------------------------|
 | `/start`      | Show introduction and capabilities          | `/start`                  |
 | `/summarize`  | Generate security-focused summary           | `/summarize`              |
 | `/clear`      | Reset conversation context                  | `/clear`                  |
 | `/help`       | Show detailed usage instructions            | `/help`                   |
-```
