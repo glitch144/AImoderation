@@ -175,7 +175,7 @@ All actions logged to SQLite database
 
 ## **Database Schema**
 
-### **user_context**
+### `user_context`
 
 | Column        | Type         | Description                  |
 |---------------|--------------|------------------------------|
@@ -183,7 +183,7 @@ All actions logged to SQLite database
 | `chat_history`| TEXT         | Serialized message list      |
 | `last_updated`| TIMESTAMP    | Last interaction time        |
 
-### **moderation_log**
+### `moderation_log`
 
 | Column        | Type         | Description                  |
 |---------------|--------------|------------------------------|
