@@ -154,3 +154,43 @@ SHORTENER_DOMAINS = {
 | `/summarize`  | Generate security-focused summary           | `/summarize`              |
 | `/clear`      | Reset conversation context                  | `/clear`                  |
 | `/help`       | Show detailed usage instructions            | `/help`                   |
+
+### Automatic Moderation
+Messages in groups are analyzed using:
+
+Rule-based pre-check (keywords/URLs)
+
+AI verification for suspicious content
+
+Deleted messages generate admin alerts
+
+All actions logged to SQLite database
+
+## Testing 
+### Unit Tests
+```bash 
+
+```
+
+
+## **Database Schema**
+
+### **user_context**
+
+| Column        | Type         | Description                  |
+|---------------|--------------|------------------------------|
+| `user_id`     | INTEGER(PK)  | Telegram user ID             |
+| `chat_history`| TEXT         | Serialized message list      |
+| `last_updated`| TIMESTAMP    | Last interaction time        |
+
+### **moderation_log**
+
+| Column        | Type         | Description                  |
+|---------------|--------------|------------------------------|
+| `id`          | INTEGER(PK)  | Log entry ID                 |
+| `user_id`     | INTEGER      | Moderated user ID            |
+| `chat_id`     | INTEGER      | Group chat ID                |
+| `message_id`  | INTEGER      | Telegram message ID          |
+| `content`     | TEXT         | Original message content     |
+| `decision`    | TEXT         | `'deleted'` or `'review'`    |
+| `timestamp`   | TIMESTAMP    | Action time                  |
