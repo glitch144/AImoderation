@@ -194,3 +194,26 @@ All actions logged to SQLite database
 | `content`     | TEXT         | Original message content     |
 | `decision`    | TEXT         | `'deleted'` or `'review'`    |
 | `timestamp`   | TIMESTAMP    | Action time                  |
+
+## **Security Considerations**
+
+### **Data Protection**
+- All user data encrypted at rest
+- API keys never logged or stored in plaintext
+
+### **Rate Limiting**
+- 15-second cooldown per user for AI checks
+- Message processing queue with backpressure
+
+### **Access Control**
+- Bot requires admin privileges in groups
+- Sensitive commands limited to group admins
+
+---
+
+## **Contributing**
+
+1. Fork the repository
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature/new-detection-method
