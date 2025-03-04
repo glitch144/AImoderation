@@ -96,6 +96,62 @@ git clone https://github.com/yourusername/ai-telegram-moderation.git
 cd ai-telegram-moderation
 
 ```
-## 
+2. Create virtual environment:
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+.venv\Scripts\activate     # Windows
+```
+3. install dependencies:
+```bash
+pip install -r requirements.txt
+```
+4. Configure environment:
+```bash
+cp .env.example .env
+# Edit .env with your credentials
+```
+## Configuration
+### Environment Variables (.env)
 
+```ini
+TELEGRAM_BOT_TOKEN=your_bot_token
+OPENROUTER_API_KEY=your_api_key
+DB_NAME=chat_context.db
+LOG_LEVEL=INFO
+MODERATION_COOLDOWN=15
+PHISHING_THRESHOLD=75
+```
 
+### Phishing Patterns (config/keywords.py)
+ ```python
+ PHISHING_KEYWORDS = [
+    "verify your account",
+    "urgent response needed",
+    # add your list here
+]
+
+TRUSTED_DOMAINS = {
+    'yourcompany.com',
+    'trusted-partner.org'
+
+}
+
+SHORTENER_DOMAINS = {
+    'bit.ly', 'goo.gl', 'tinyurl.com'
+}
+```
+## Usage 
+### Starting the bot
+ ```bash 
+ python main.py
+ ```
+### Commands
+```markdown
+ | Command       | Description                                  | Example                   |
+|---------------|----------------------------------------------|---------------------------|
+| `/start`      | Show introduction and capabilities          | `/start`                  |
+| `/summarize`  | Generate security-focused summary           | `/summarize`              |
+| `/clear`      | Reset conversation context                  | `/clear`                  |
+| `/help`       | Show detailed usage instructions            | `/help`                   |
+```
