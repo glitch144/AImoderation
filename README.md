@@ -35,7 +35,7 @@ An advanced Telegram bot combining AI moderation, phishing detection, and conver
 
 ## Architecture
 
-
+```
 └── 📁AImoderation
     └── 📁config
         └── __init__.py
@@ -60,3 +60,42 @@ An advanced Telegram bot combining AI moderation, phishing detection, and conver
     └── main.py
     └── README.md
     └── requirements.txt
+
+```
+
+### Key Files
+- **config/**
+  - `keywords.py`: Phishing patterns and domain lists
+  - `settings.py`: Environment configurations
+- **src/bot/**
+  - `handlers.py`: Telegram command handlers
+- **src/database/**
+  - `db_handler.py`: Database operations
+- **src/detection/**
+  - `phishing_detector.py`: Phishing detection logic
+- **src/services/**
+  - `openrouter.py`: OpenRouter API integration
+- **Root Files**
+  - `main.py`: Application entry point
+  - `requirements.txt`: Python dependencies
+  - `chat_context.db`: SQLite database
+  - `bot.log`: Application logs
+
+## Installation
+
+### Prerequisites
+- Python 3.10+
+- Telegram bot token from [@BotFather](https://t.me/BotFather)
+- OpenRouter API key
+- Linux/Windows/macOS with 4GB+ RAM
+
+### Setup
+1. Clone repository:
+```bash
+git clone https://github.com/yourusername/ai-telegram-moderation.git
+cd ai-telegram-moderation
+
+```
+## 
+
+
