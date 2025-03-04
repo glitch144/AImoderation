@@ -8,12 +8,11 @@ An advanced Telegram bot combining AI moderation, phishing detection, and conver
 3. [Installation](#installation)
 4. [Configuration](#configuration)
 5. [Usage](#usage)
-6. [Testing](#testing)
-7. [Database Schema](#database-schema)
-8. [Security Considerations](#security-considerations)
-9. [Contributing](#contributing)
-10. [License](#license)
-11. [Acknowledgments](#acknowledgments)
+6. [Database Schema](#database-schema)
+7. [Security Considerations](#security-considerations)
+8. [Contributing](#contributing)
+9. [License](#license)
+10. [Acknowledgments](#acknowledgments)
 
 ## Features
 - **AI-Powered Moderation**
@@ -166,11 +165,7 @@ Deleted messages generate admin alerts
 
 All actions logged to SQLite database
 
-## Testing 
-### Unit Tests
-```bash 
 
-```
 
 
 ## **Database Schema**
@@ -217,3 +212,20 @@ All actions logged to SQLite database
 2. Create a feature branch:
    ```bash
    git checkout -b feature/new-detection-method
+
+## License
+**AI Moderation** © 2025 by Brook Temesgen  
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+---
+
+## Acknowledgments
+- **[OpenRouter.ai](https://openrouter.ai/)** - For LLM API access
+- **[Python-Telegram-Bot](https://python-telegram-bot.org/)** - Telegram bot framework
+- **[TLDextract](https://github.com/john-kurkowski/tldextract)** - Domain parsing library
+- **[OWASP](https://owasp.org/)** - Phishing pattern references
+- **Open Source Community** - For tools and inspiration
+
+---
+
+**Disclaimer**: Use in compliance with Telegram's Terms of Service and local laws. Maintainers assume no liability for misuse.
